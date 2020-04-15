@@ -1,0 +1,82 @@
+\documentclass{muratcan_cv}
+
+\setname{Murat Can}{Karacabey}
+\setaddress{Munich/Germany}
+\setmobile{xx xxx xx xx}
+\setmail{muratcankaracabey@gmail.com}
+\setposition{Work Student} %ignored for now
+\setlinkedinaccount{https://www.linkedin.com/in/murat-can-karacabey-568a96b1/} %you can play with color of the template (red is also nice..)
+\setgithubaccount{https://github.com/muratcankaracabey} %you can play with color of the template (red is also nice..)
+\setthemecolor{red} %you can play with color of the template (red is also nice..)
+
+\begin{document}
+%Set variables
+%You can add sections, texts, explanations just by copying the style below. Replace the dummy texts "\lipsum[1][x-x]\par" with actual texts.
+%Create header
+\headerview
+\vspace{1ex}
+%Sections
+%
+% Summary
+\addblocktext{Summary}{%
+\lipsum[1][1-12]\par
+}
+%
+%Education
+\section{Education} 
+    \datedexperience{Boğaziçi University}{2013-2018} 
+    \explanation{B.S in Computer Engineering} 
+    \datedexperience{Technical University of Munich}{2019-2022} 
+    \explanation{M.S in Informatics} 
+%
+% Experience
+\section{Experience}
+    %
+    \datedexperience{Intertech Inc.}{2014-Summer / Turkey} 
+    \explanation{Intern as android developer} 
+    %
+    \datedexperience{Velocity Inc.}{2015-Summer / Turkey} 
+    \explanation{Intern as Developer/Tester} 
+    %
+    \datedexperience{Akbank}{2018-2019 / Turkey} 
+    \explanation{Ios Developer} 
+    \explanationdetail{\coloredbullet\ \lipsum[1][1-2]\par}
+    %
+    \datedexperience{Mobile-Software AG}{2019-2020 / Germany} 
+    \explanation{Ios Developer} 
+    \explanationdetail{\coloredbullet\ \lipsum[1][4-5]\par.}
+    %
+    \datedexperience{BMW Autonomous Driving Campus}{2020-Now / Germany} 
+    \explanation{Working Student} 
+    \explanationdetail{\coloredbullet\ \lipsum[1][3-4]\par}
+%
+% Skills
+\section{Skills}
+    %
+    \newcommand{\skillone}{\createskill{Programming Languages}{\textbf{\emph{Experienced:}} \ \  Python \cpshalf Swift \ \ \textbf{\emph{Familiar:}} \ \  Javascript \cpshalf Objective-C \cpshalf Bash \cpshalf Java \cpshalf Scheme}}
+    %
+    \newcommand{\skilltwo}{\createskill{Software Development}{Programming Paradigms \cpshalf GIT \cpshalf CLI \cpshalf Agile Methodology \cpshalf DevOps Lifecycles}}
+    %
+    \newcommand{\skillthree}{\createskill{Frameworks \ \& \ Libraries}{Jupyter \cpshalf Matplotplib \cpshalf Numpy \cpshalf Pandas \cpshalf Scikit-learn \cpshalf Gym \cpshalf PyTorch \cpshalf Tensorflow}}
+    %
+    \newcommand{\skillfour}{\createskill{iOS Programming}{RxSwift \cpshalf PromiseKit \cpshalf CocoaPods \cpshalf Autolayout/DSLs}}
+    %
+    \newcommand{\skillfive}{\createskill{Languages}{\textbf{\emph{Native:}} \ \  Turkish \ \ \textbf{\emph{Fluent:}} \ \ English \ \ \textbf{\emph{Beginner:}} \ \  German }}
+    %
+    \createskills{\skillone, \skilltwo, \skillthree, \skillfour, \skillfive}
+%
+% Experience
+\section{Extra}
+    \newcommand{\extraone}{\lipsum[1][7-8]\par}
+    %
+    \newcommand{\extratwo}{\lipsum[1][9-10]\par}
+    %
+    \newcommand{\extrathree}{\lipsum[1][11-12]\par}
+    %
+    \newcommand{\listofextras}{\extraone, \extratwo, \extrathree}
+    %
+    \createbullets{\listofextras}
+%
+%Footnote
+\createfootnote
+\end{document}
