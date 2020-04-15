@@ -156,7 +156,7 @@
 \explanationdetail{
   \begin{tabular}{rl}
     \makeatletter
-    \@for\thisitem:=#1\do{\thisitem\\}
+    \@for\thisitem:=#1\do{\thisitem\\[1ex]}
     \makeatother
     \end{tabular}
 }
