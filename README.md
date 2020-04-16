@@ -1,5 +1,5 @@
 # Latex CV
-
+- You can create your CV using this template on [Overleaf](https://www.overleaf.com/latex/templates/murats-cv-template/gfwjwshrzqgd) very easily.
 - This CV is inspired by the design of [Awesome CV](https://github.com/posquit0/Awesome-CV). 
 - You might think this as a simplified version of it. I created this project from scratch to learn Latex and the way I wrote might not be the best latex practices. However, it is easy to play with the high level functions provided in [CV.tex](https://github.com/muratcankaracabey/latex_cv/blob/master/CV.tex) file without going too much into the detail to have a certain level of expressiveness in your resume. The simplicity of it also makes it easy to understand what is going on and also enables to make low level customizations.
 
