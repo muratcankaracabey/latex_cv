@@ -13,7 +13,7 @@
 \RequirePackage{titlesec}
 \RequirePackage{tikz}
 \RequirePackage{fontspec}
-\RequirePackage[left=0.75in,top=0.4in,right=0.75in,bottom=0.6in]{geometry} % Document margins
+\RequirePackage[left=0.75in,top=0.3in,right=0.75in,bottom=0.6in]{geometry} % Document margins
 \RequirePackage{hyperref}
 \RequirePackage{fontawesome}
 \RequirePackage{mfirstuc}
@@ -143,15 +143,11 @@ Position: & \@claimedposition \\
 }
 
 \newcommand{\explanation}[1]{%
-    \noindent \mbox { \scshape \hspace{1.2em} \footnotesize #1}\\[0.05cm]
+    \mbox { \scshape \hspace{1.2em} \footnotesize #1}\\[0.05cm]
 }
 
 \newcommand{\explanationdetail}[1]{%
-    \begin{minipage}{\linewidth} \hspace{1.5em} \footnotesize #1 \end{minipage} \\[0.1cm]
-}
-
-\newcommand{\simpletext}[1]{%
-    \begin{minipage}{\linewidth} \footnotesize #1 \end{minipage}
+    \indent \begin{minipage}{0.96\linewidth} \footnotesize #1 \end{minipage} \\[0.1cm]
 }
 
 \newcommand{\itemwithtext}[1]{%
@@ -160,7 +156,7 @@ Position: & \@claimedposition \\
 
 \newcommand{\addblocktext}[2]{%
   \section{#1} 
-  \explanationdetail{#2}
+  \indent \explanationdetail{\hspace{4ex} #2}
 }
 
 \newcommand\createskill[2]{%
