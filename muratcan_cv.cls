@@ -4,7 +4,7 @@
 % Might be interpreted as an easier-to-edit or easier-to-understand-what-is-going-on version of it.
 \author{Murat Can Karacabey}
 \RequirePackage[dvipsnames]{xcolor} % moved here I guess article class causes option clash with xcolor if used after loading the class
-\LoadClass[10pt]{article}
+\LoadClass[11pt]{article}
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{muratcan_cv}[2020/04/15 Muratcan CV Class]
 \RequirePackage[sfdefault]{noto}
@@ -19,6 +19,7 @@
 \RequirePackage{mfirstuc}
 \RequirePackage{ifthen}
 \RequirePackage{lipsum}
+\RequirePackage{array}
 \pagestyle{empty}
 
 %Setup
@@ -31,6 +32,13 @@
 \newcommand*{\setthemecolor}[1]{\def\@themecolor{#1}}
 \newcommand*{\setlinkedinaccount}[1]{\def\@linkedinaccount{#1}}
 \newcommand*{\setgithubaccount}[1]{\def\@githubaccount{#1}}
+
+%Setup for coverletter
+
+\newcommand*{\setcompanyname}[1]{\def\@companyname{#1}}
+\newcommand*{\setcontactperson}[1]{\def\@contactperson{#1}}
+\newcommand*{\setclaimedposition}[1]{\def\@claimedposition{#1}}
+
 
 \hypersetup{
     colorlinks=true,
@@ -82,6 +90,23 @@
         } % 
 }
 
+% Covverletterview
+
+\newcommand\coverletter[1]{ 
+\\  \coverlettersubview 
+\section{}
+\textbf{ Dear \@contactperson, \\[0.5cm]}
+  #1
+}
+
+\newcommand\coverlettersubview{
+\begin{tabular}{>{\scshape \bfseries \color{\@themecolor}}l  >{\small }l}
+Company: & \@companyname \\
+Position: & \@claimedposition \\
+\end{tabular}
+}
+
+
 % Helper commands
 
 \newcommand\ruleafter[1]{#1~{\color{black!60!\@themecolor}\hrulefill}} % a trick to put the line with <before> parameter in \titleformat
@@ -89,7 +114,7 @@
 %colorfulpipeseperator
 
 \newcommand{\cps}{{\color{\@themecolor} \quad\textbar\quad}}
-\newcommand{\cpshalf}{{\color{\@themecolor} \hspace{0.5em}\textbar\hspace{0.5em}}}
+\newcommand{\cpshalf}{{\color{\@themecolor} \hspace{0.2em}\textbar\hspace{0.2em}}}
 
 \newcommand{\coloredbullet}{{\color{\@themecolor} \textbullet}}
 
@@ -101,7 +126,7 @@
   {}{0em}                      % Can be used to give a prefix to all sections, like 'Section ...'
   {\ruleafter}                           % Can be used to insert code before the heading
 
-\titlespacing*{\section}{0pt}{0pt}{4pt}
+\titlespacing*{\section}{-1pt}{0pt}{0pt}
 
 % Textview commands
 
@@ -114,15 +139,15 @@
 }
 
 \newcommand{\datedexperience}[2]{%
-  \begin{small} \mbox { \hspace{1em} \scshape \textbf{#1} } \end{small} \hfill \datetext{#2}\\[0.25ex] %
+  \begin{small} \mbox { \hspace{1em} \scshape \textbf{#1} } \end{small} \hfill \datetext{#2}\\[0.01cm] %
 }
 
 \newcommand{\explanation}[1]{%
-    \noindent \mbox { \scshape \hspace{1.2em} \footnotesize #1}\\[0.25ex]
+    \noindent \mbox { \scshape \hspace{1.2em} \footnotesize #1}\\[0.05cm]
 }
 
 \newcommand{\explanationdetail}[1]{%
-    \begin{minipage}{\linewidth} \hspace{1.5em} \footnotesize #1 \end{minipage} \\[0.75ex]
+    \begin{minipage}{\linewidth} \hspace{1.5em} \footnotesize #1 \end{minipage} \\[0.1cm]
 }
 
 \newcommand{\simpletext}[1]{%
@@ -156,7 +181,7 @@
 \explanationdetail{
   \begin{tabular}{rl}
     \makeatletter
-    \@for\thisitem:=#1\do{\thisitem\\[1ex]}
+    \@for\thisitem:=#1\do{\thisitem\\[0.1cm]}
     \makeatother
     \end{tabular}
 }
