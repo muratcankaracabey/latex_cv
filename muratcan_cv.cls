@@ -94,8 +94,8 @@
 
 \newcommand\coverletter[1]{ 
 \\  \coverlettersubview 
-\section{}
-\textbf{ Dear \@contactperson, \\[0.5cm]}
+\section{} \vspace{1ex} 
+\textbf{ Dear \@contactperson, \\[0.1cm]}
   #1
 }
 
